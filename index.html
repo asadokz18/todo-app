@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasks</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="app">
+  <header>
+    <h1>Today’s tasks</h1>
+    <p id="count" class="count" aria-live="polite"></p>
+  </header>
+
+  <form id="add-form" autocomplete="off">
+    <label class="sr-only" for="new-task">New task</label>
+    <input id="new-task" type="text" placeholder="What needs doing?" maxlength="120" required>
+    <button type="submit">Add task</button>
+  </form>
+
+  <nav class="filters" aria-label="Filter tasks">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="active">Active</button>
+    <button data-filter="done">Done</button>
+  </nav>
+
+  <ul id="list"></ul>
+  <p id="empty" class="empty" hidden></p>
+
+  <footer>
+    <button id="clear" type="button" class="link">Clear completed</button>
+  </footer>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
